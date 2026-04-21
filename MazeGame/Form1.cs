@@ -6,6 +6,11 @@ using System.Runtime.CompilerServices;
 using System.Security.AccessControl;
 using System.Security.Cryptography.Xml;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
+using System.Windows.Forms;
 
 namespace MazeGame
 {
