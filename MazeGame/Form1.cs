@@ -394,7 +394,7 @@ namespace MazeGame
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (gameStarted)
+            if (gameStarted && !nextLvlButton.Visible)
             {
                 if (e.KeyCode == Keys.W)
                 {
