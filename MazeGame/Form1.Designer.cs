@@ -34,6 +34,7 @@
             subtitleLabel = new Label();
             playButton = new Button();
             panel1 = new Panel();
+            enemyGroupImage = new PictureBox();
             label11 = new Label();
             label10 = new Label();
             label9 = new Label();
@@ -57,24 +58,23 @@
             button2 = new Button();
             button1 = new Button();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            enemyGroupImage = new PictureBox();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)enemyGroupImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)enemyImage2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)enemyImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)playerImage).BeginInit();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)enemyGroupImage).BeginInit();
             SuspendLayout();
             // 
             // lostLabel
             // 
             lostLabel.AutoSize = true;
             lostLabel.BackColor = Color.Transparent;
-            lostLabel.Font = new Font("AniMe Matrix - MB_EN", 47.9999924F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            lostLabel.Font = new Font("Matura MT Script Capitals", 48F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             lostLabel.ForeColor = Color.White;
-            lostLabel.Location = new Point(377, 223);
+            lostLabel.Location = new Point(470, 224);
             lostLabel.Name = "lostLabel";
-            lostLabel.Size = new Size(480, 77);
+            lostLabel.Size = new Size(325, 85);
             lostLabel.TabIndex = 0;
             lostLabel.Text = "You lost!";
             // 
@@ -129,6 +129,16 @@
             panel1.Size = new Size(1273, 684);
             panel1.TabIndex = 5;
             panel1.Paint += panel1_Paint;
+            // 
+            // enemyGroupImage
+            // 
+            enemyGroupImage.Image = Properties.Resources.Untitled_design__4_;
+            enemyGroupImage.Location = new Point(583, 449);
+            enemyGroupImage.Name = "enemyGroupImage";
+            enemyGroupImage.Size = new Size(50, 44);
+            enemyGroupImage.SizeMode = PictureBoxSizeMode.StretchImage;
+            enemyGroupImage.TabIndex = 21;
+            enemyGroupImage.TabStop = false;
             // 
             // label11
             // 
@@ -365,7 +375,7 @@
             panel2.Controls.Add(button2);
             panel2.Controls.Add(button1);
             panel2.Controls.Add(lostLabel);
-            panel2.Location = new Point(935, 810);
+            panel2.Location = new Point(945, 800);
             panel2.Name = "panel2";
             panel2.Size = new Size(1271, 683);
             panel2.TabIndex = 7;
@@ -374,13 +384,13 @@
             // 
             button2.BackColor = Color.White;
             button2.FlatStyle = FlatStyle.Popup;
-            button2.Font = new Font("AniMe Matrix - MB_EN", 11.9999981F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            button2.Font = new Font("Matura MT Script Capitals", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.FromArgb(29, 0, 86);
             button2.Location = new Point(624, 332);
             button2.Name = "button2";
             button2.Size = new Size(233, 51);
             button2.TabIndex = 8;
-            button2.Text = "Exit to main menu";
+            button2.Text = "Main menu";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
@@ -388,7 +398,7 @@
             // 
             button1.BackColor = Color.White;
             button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("AniMe Matrix - MB_EN", 11.9999981F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            button1.Font = new Font("Matura MT Script Capitals", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.FromArgb(29, 0, 86);
             button1.Location = new Point(377, 332);
             button1.Name = "button1";
@@ -397,16 +407,6 @@
             button1.Text = "Restart Level";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
-            // 
-            // enemyGroupImage
-            // 
-            enemyGroupImage.Image = Properties.Resources.Untitled_design__4_;
-            enemyGroupImage.Location = new Point(583, 449);
-            enemyGroupImage.Name = "enemyGroupImage";
-            enemyGroupImage.Size = new Size(50, 44);
-            enemyGroupImage.SizeMode = PictureBoxSizeMode.StretchImage;
-            enemyGroupImage.TabIndex = 21;
-            enemyGroupImage.TabStop = false;
             // 
             // Form1
             // 
@@ -429,12 +429,12 @@
             KeyDown += Form1_KeyDown;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)enemyGroupImage).EndInit();
             ((System.ComponentModel.ISupportInitialize)enemyImage2).EndInit();
             ((System.ComponentModel.ISupportInitialize)enemyImage).EndInit();
             ((System.ComponentModel.ISupportInitialize)playerImage).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)enemyGroupImage).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }

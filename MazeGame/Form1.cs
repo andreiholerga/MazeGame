@@ -198,7 +198,7 @@ namespace MazeGame
                 new Rectangle(xOffset - cellSize, yOffset - cellSize,
                               cellSize * (gridSize + 2), cellSize * (gridSize + 2)));
 
-            //Desenez iesirea din labirint
+            // Desenez iesirea din labirint
             g.FillRectangle(new SolidBrush(BackColor),
                new Rectangle(xOffset + cellSize * gridSize - cdo, yOffset + cellSize * (gridSize - 1) - cdo,
                              cellSize + cdo * 2, cellSize + cdo * 2));
@@ -316,7 +316,6 @@ namespace MazeGame
         {
             if (gameRunning)
             {
-                
 
                 if (enemies[0].position == player.position)
                     LevelLost();
@@ -328,6 +327,7 @@ namespace MazeGame
                 {
                     Move(player);
                 }
+
                 if (player.lastPos == new Point(gridSize - 1, gridSize - 1))
                 {
                     LevelWon();
@@ -621,7 +621,7 @@ namespace MazeGame
                     return score;
             }
 
-            return 0; // default if file doesn't exist or invalid
+            return 0;
         }
 
     }
