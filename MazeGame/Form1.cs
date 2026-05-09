@@ -245,9 +245,7 @@ namespace MazeGame
         // Functie recursiva de tip Breadth First care creeaza labirintul
         private void RemoveWall(int i, int j)
         {
-            // Punctul (i,j) este transformat in spatiu
             maze[i, j] = 0;
-
             // Se creeza o lista cu cele 4 directii
             var directions = new List<(int di, int dj)>
             {
@@ -258,9 +256,7 @@ namespace MazeGame
             // Se verifica fiecare directie si se creeza un drum daca se gaseste un perete
             foreach (var (di, dj) in directions)
             {
-                int ni = i + di;
-                int nj = j + dj;
-
+                int ni = i + di, nj = j + dj;
                 if (InBounds(ni, nj) && maze[ni, nj] == 1)
                 {
                     maze[i + di / 2, j + dj / 2] = 0;
@@ -351,11 +347,14 @@ namespace MazeGame
                 }
 
 
-                playerImage.Location = Lerp(player.lastPos, player.position, tick % player.gameTicksPerMove, player.gameTicksPerMove, cellSize, xOffset, yOffset);
-                enemyImage.Location = Lerp(enemies[0].lastPos, enemies[0].position, tick % enemies[0].gameTicksPerMove, enemies[0].gameTicksPerMove, cellSize, xOffset, yOffset);
+                playerImage.Location = Lerp(player.lastPos, player.position, tick % player.gameTicksPerMove, 
+                                            player.gameTicksPerMove, cellSize, xOffset, yOffset);
+                enemyImage.Location = Lerp(enemies[0].lastPos, enemies[0].position, tick % enemies[0].gameTicksPerMove, 
+                                            enemies[0].gameTicksPerMove, cellSize, xOffset, yOffset);
                 if (level >= enemy2level)
                 {
-                    enemyImage2.Location = Lerp(enemies[1].lastPos, enemies[1].position, tick % enemies[1].gameTicksPerMove, enemies[1].gameTicksPerMove, cellSize, xOffset, yOffset);
+                    enemyImage2.Location = Lerp(enemies[1].lastPos, enemies[1].position, tick % enemies[1].gameTicksPerMove, 
+                                                enemies[1].gameTicksPerMove, cellSize, xOffset, yOffset);
                     if (enemies[0].position == enemies[1].position)
                     {
                         enemyImage.Visible = false;
